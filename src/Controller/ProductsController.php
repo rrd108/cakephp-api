@@ -19,8 +19,8 @@ class ProductsController extends AppController
     public function index()
     {
         $products = $this->paginate($this->Products);
-
         $this->set(compact('products'));
+        $this->viewBuilder()->setOption('serialize', ['products']);
     }
 
     /**
