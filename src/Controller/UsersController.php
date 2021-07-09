@@ -11,6 +11,20 @@ namespace App\Controller;
  */
 class UsersController extends AppController
 {
+    public function login()
+    {
+        $result = $this->Authentication->getResult();
+        if ($result->isValid()) {
+            $userIdentity = $this->Authentication->getIdentity();
+            $user = [
+                'id' => $userIdentity->id,
+                'token' => $userIdentity->token
+            ];
+            $this->set(compact('user'));
+            $this->viewBuilder()->setOption('serialize', ['user']);
+        }
+    }
+
     /**
      * Index method
      *

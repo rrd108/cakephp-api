@@ -57,14 +57,15 @@ class Application extends BaseApplication
         }
 
         /*
-         * Only try to load DebugKit in development mode
-         * Debug Kit should not be installed on a production system
-         */
+        * Only try to load DebugKit in development mode
+        * Debug Kit should not be installed on a production system
+        */
         if (Configure::read('debug')) {
             $this->addPlugin('DebugKit');
         }
 
         // Load more plugins here
+        $this->addPlugin('ApiTokenAuthenticator');
     }
 
     /**
@@ -100,9 +101,9 @@ class Application extends BaseApplication
 
             // Cross Site Request Forgery (CSRF) Protection Middleware
             // https://book.cakephp.org/4/en/controllers/middleware.html#cross-site-request-forgery-csrf-middleware
-            ->add(new CsrfProtectionMiddleware([
+            /*->add(new CsrfProtectionMiddleware([
                 'httponly' => true,
-            ]));
+            ]))*/;
 
         return $middlewareQueue;
     }
