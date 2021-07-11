@@ -1,8 +1,8 @@
 <?php
 return [
   'Cors' => [
-    'AllowOrigin' => '*',
-    'AllowMethods' => ['GET', 'POST', 'OPTIONS'],
+    'AllowOrigin' => true, // accept all origin
+    'AllowMethods' => ['GET', 'POST'],
     'AllowHeaders' => ['Token', 'Content-Type'],
     'MaxAge' => 300,
   ]
