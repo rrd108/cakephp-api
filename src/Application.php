@@ -66,6 +66,9 @@ class Application extends BaseApplication
 
         // Load more plugins here
         $this->addPlugin('ApiTokenAuthenticator');
+
+        Configure::load('cors', 'default', false);
+        $this->addPlugin('Cors');
     }
 
     /**

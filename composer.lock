@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "c427c8227467d5db25f2d41563b507e2",
+    "content-hash": "53ccb4ae5d0d984c95e543fe6d85eb4e",
     "packages": [
         {
             "name": "cakephp/authentication",
@@ -1219,6 +1219,43 @@
                 "source": "https://github.com/php-fig/simple-cache/tree/master"
             },
             "time": "2017-10-23T01:57:42+00:00"
+        },
+        {
+            "name": "rabp99/cakephp-cors",
+            "version": "v3.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/rabp99/cakephp-cors.git",
+                "reference": "53de1922d2e5647fc37f0045adb3498bb1a38247"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/rabp99/cakephp-cors/zipball/53de1922d2e5647fc37f0045adb3498bb1a38247",
+                "reference": "53de1922d2e5647fc37f0045adb3498bb1a38247",
+                "shasum": ""
+            },
+            "require": {
+                "cakephp/cakephp": "^4.0",
+                "php": ">=7.2.0",
+                "psr/http-server-handler": "^1.0",
+                "psr/http-server-middleware": "^1.0"
+            },
+            "require-dev": {
+                "cakephp/cakephp-codesniffer": "^4.0",
+                "phpunit/phpunit": "~8.5.0"
+            },
+            "type": "cakephp-plugin",
+            "autoload": {
+                "psr-4": {
+                    "Cors\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "description": "It's a pull request from ozee31/cakephp-cors that solve the issue about OPTIONS method. A CakePHP 4 plugin for activate cors domain in your application",
+            "support": {
+                "source": "https://github.com/rabp99/cakephp-cors/tree/v3.0.0"
+            },
+            "time": "2021-01-09T16:51:42+00:00"
         },
         {
             "name": "robmorgan/phinx",
